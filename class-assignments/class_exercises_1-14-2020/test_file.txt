@@ -1,0 +1,19 @@
+Class Notes:
+
+Advantages of Shell over GUI
+ - Logging commands
+ - Scripts
+ - GUIs are time consuming
+
+Directory Structures
+ - root  / the topmost directory
+ - home /Users/"Username" home direcotry
+ - shortcut to home ~
+
+Shortcuts:
+ - Ctrl + A Go to the begining of the line
+ - Ctrl + E Go to the end of the line
+ - Ctrl + L Clear the screen
+ - Ctrl + U Clear the line before the cursor
+ - Ctrl + K Clear the line after the cursor
+ - Ctrl + C Kill the command that is running
