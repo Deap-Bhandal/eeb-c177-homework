@@ -1,0 +1,25 @@
+  287  cp ~/Developer/repos/CSB/unix/sandbox/file1.txt .
+  288  ls
+  289  cd ..
+  290  cd sandbox/
+  291  mv Buzzard2015_about.txt ../data/Buzzard2015_about3.txt
+  292  mkdir Deap
+  293  cd Deap/
+  294  mkdir Deap2
+  295  cd Deap2/
+  296  touch file1.txt file2.txt file3.txt file4.txt file5.txt
+  297  ls
+  298  rm file4.txt file5.txt
+  299  ls
+  300  his
+  301  cd ~
+  302  his
+  303  history 10
+  304  cd ~/Developer
+  305  cd repos/CSB/
+  306  cd unix/sandbox/
+  307  ls
+  308  rmdir deap
+  309  rmdir Deap
+  310  rm -ri Deap
+  311  history 25 > class_commands.txt
