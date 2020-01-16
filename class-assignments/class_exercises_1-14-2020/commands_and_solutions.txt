@@ -1,0 +1,156 @@
+This file contains the commands used during the manipulation of the data-shell file. The explanations are in the file commands_with_explanations_and_solutions.txt. After this, I listed my answers to the exercises posted throughout the tutorial.
+
+Working with the data-shell directory:
+
+Typed command: cd Developer/repos/eeb-c177-homework/class-assignments/class_exercises_1-14-2020/data-shell
+
+Typed command: pwd
+
+Typed command: ls -F
+
+Typed command: mkdir thesis
+
+Typed command: ls -F
+
+Typed command: ls -F thesis
+
+Typed command: cd thesis
+
+Typed command: nano draft.txt
+
+Typed two lines of text into nano.
+
+Typed commands: ctrl + o, enter, ctrl + x
+
+Typed command: ls
+
+Typed command: touch my_file.txt
+
+Typed command: ls -l
+
+Typed command: cd .. (Same as typing: ~/Developer/repos/eeb-c177-homework/class-assignments/class_exercises_1-14-2020/data-shell)
+
+Typed command: mv thesis/draft.txt thesis/quotes.txt
+
+Typed command: ls thesis
+
+Typed command: mv thesis/quotes.txt .
+
+Typed command: ls thesis.
+
+Typed command: ls quotes.txt
+
+Typed command: cp quotes.txt thesis/quotations.txt
+
+Typed command: ls quotes.txt thesis/quotations.txt
+
+Typed command: ls thesis thesis_backup
+
+Typed command: rm quotes.txt
+
+Typed command: ls quotes.txt
+
+Typed command: rm -r thesis
+
+Typed command: cd data
+
+Typed command: mkdir backup
+
+Typed command: cp amino-acids.txt animals.txt backup/
+
+Exercises:
+
+Creating files a different way:
+
+1. The touch command created a new file (my_file.txt) in the current directory. 
+2. The command ls -l listed the sizes of the files (my_file.txt is zero bytes). 
+3. The touch command is useful for creating a file without opening it for programs that require an already existing file. 
+
+Moving files to a new folder:
+
+The following commands are run: 
+ls -F
+ analyzed/ raw/
+ls -F analyzed
+fructose.dat glucose.dat maltose.dat sucrose.dat
+cd analyzed
+
+However the sucrose and maltose files should be in the raw folder. The command mv sucrose.dat maltose.dat ../raw should place them in the raw directory. 
+
+Renaming files:
+
+To rename statstics.txt to statistics.txt run the command: mv statstics.txt statistics.txt
+
+Moving and copying:
+
+The follwing commands are run in a directory (named data) with a file named proteins.dat
+mkdir recombine
+mv proteins.dat recombine/
+cp recombine/proteins.dat ../proteins-saved.dat
+ls
+
+The ls command yields the output recombine since that is the only directory in the data directory and the proteins.dat file is in the recombine folder and the protein-saved.dat folder is in the directory that stores the data directory. 
+
+Using rm safely: 
+
+Running the command: rm -i thesis_backup/quotations.txt yields rm: remove regular file 'thesis_backup/quotations.txt'? Answering Y will delete it. Answering N will not. This is useful for confirmation of which file one is deleting. 
+
+Copy with multiple filenames:
+
+When given several file names the cp command copies the files to the directory at the end of the command. If the command cp is followed by three file names and no directory the output will state the last file is not a directory. 
+
+List filenames matching a pattern:
+
+In the molecules directory, the ls command ls *t??ne.pdb will produce the output: ethane.pdb methane.pdb
+
+More on wildcards:
+
+Commands Sam should type:
+cp *dataset* backup/datasets
+cp *calibration.txt backup/calibration
+cp 2015-11-* send_to_bob/all_november_files/
+cp *-23-dataset* send_to_bob/all_datasets_created_on_a_23rd/
+
+Organizing directories and files:
+
+Jamie needs to move fructose.dat and sucrose.dat to analyzed directory. The command to do this is: mv *.dat analyzed
+
+Reproduce a folder structure:
+
+To achieve the folder structure commands 1 and 2 will work:
+
+Command 1:
+mkdir 2016-05-20
+mkdir 2016-05-20/data
+mkdir 2016-05-20/data/processed
+mkdir 2016-05-20/data/raw
+
+Command 2:
+mkdir 2016-05-20
+cd 2016-05-20
+mkdir data
+cd data
+mkdir raw processed
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

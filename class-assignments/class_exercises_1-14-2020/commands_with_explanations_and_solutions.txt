@@ -1,0 +1,212 @@
+This file contains the commands used and explanations during the manipulation of the data-shell file. After this, I listed my answers to the exercises posted throughout the tutorial. The file commands_and_solutions.txt only lays out the commands and the exercise solutions. 
+
+Working with the data-shell directory:
+
+Typed command: cd Developer/repos/eeb-c177-homework/class-assignments/class_exercises_1-14-2020/data-shell
+
+This took me to the data-shell directory.
+
+Typed command: pwd
+
+This confirmed I was in the correct directory.
+
+Typed command: ls -F
+
+This listed the contents of the data-shell directory.
+
+Typed command: mkdir thesis
+
+This created a directory called thesis in the data-shell directory.
+
+Typed command: ls -F
+
+This confirmed that the thesis directory was in the data-shell directory.
+
+Typed command: ls -F thesis
+
+This confirmed that the thesis directory was empty.
+
+Typed command: cd thesis
+
+This changed the directory to thesis.
+
+Typed command: nano draft.txt
+
+This used the nano program to create a text file with the name draft and open the file.
+
+Typed two lines of text into nano.
+
+Typed commands: ctrl + o, enter, ctrl + x
+
+This saved the file with the new text and closed nano. 
+
+Typed command: ls
+
+This listed the draft file in the thesis directory.
+
+Typed command: touch my_file.txt
+
+This created a new file called my_file.txt
+
+Typed command: ls -l
+
+This showed information on the two files including their sizes. The newest file had a size of 0 bytes. The touch command is useful when programs already require a file to be created without opening it like nano does. 
+
+Typed command: cd .. (Same as typing: ~/Developer/repos/eeb-c177-homework/class-assignments/class_exercises_1-14-2020/data-shell)
+
+This took me back to the data-shell directory.
+
+Typed command: mv thesis/draft.txt thesis/quotes.txt
+
+This essentially renames the draft file to quotes.txt. 
+
+Typed command: ls thesis
+
+This confirmed the draft.txt file is now named quotes.txt.
+
+Typed command: mv thesis/quotes.txt .
+
+This moved the quotes.txt file from the thesis directory to the current working directory. 
+
+Typed command: ls thesis.
+
+This shows quotes.txt file is not in thesis directory.
+
+Typed command: ls quotes.txt
+
+This shows that the quotes.txt file is in the current working directory.
+
+Typed command: cp quotes.txt thesis/quotations.txt
+
+This copied the quotes file to the theis folder with the name quotations.txt.
+
+Typed command: ls quotes.txt thesis/quotations.txt
+
+This showed a quotes.txt in the current directory and a quotations.txt file in the thesis directory.
+
+Typed command: cp -r thesis thesis_backup
+
+This copied the thesis folder and created a backup folder called thesis_backup.
+
+Typed command: ls thesis thesis_backup
+
+This confirmed that a folder called thesis and thesis_backup and their contents exist in the current directory. 
+
+Typed command: rm quotes.txt
+
+This removed the quotes.txt file.
+
+Typed command: ls quotes.txt
+
+The output confirmed no such file exists anymore. Executing rm -i thesis_backup/quotations.txt asks for a confirmation before deleting a file. This helps the user make sure the correct file is removed. 
+
+To remove a directory we cannot use rm thesis but can use rm -r thesis.
+
+Typed command: rm -r thesis
+
+This removed the directory thesis.
+
+Typed command: cd data
+
+Typed command: mkdir backup
+
+Typed command: cp amino-acids.txt animals.txt backup/
+
+These commands opened the data directory, made a directory called backup in it, and copied amino-acids.txt and animals.txt to the backup directory. The command cp amino-acids.txt animals.txt morse.txt yields and error message since no directory is specified.
+
+Exercises:
+
+Creating files a different way:
+
+1. The touch command created a new file (my_file.txt) in the current directory. 
+2. The command ls -l listed the sizes of the files (my_file.txt is zero bytes). 
+3. The touch command is useful for creating a file without opening it for programs that require an already existing file. 
+
+Moving files to a new folder:
+
+The following commands are run: 
+ls -F
+ analyzed/ raw/
+ls -F analyzed
+fructose.dat glucose.dat maltose.dat sucrose.dat
+cd analyzed
+
+However the sucrose and maltose files should be in the raw folder. The command mv sucrose.dat maltose.dat ../raw should place them in the raw directory. 
+
+Renaming files:
+
+To rename statstics.txt to statistics.txt run the command: mv statstics.txt statistics.txt
+
+Moving and copying:
+
+The follwing commands are run in a directory (named data) with a file named proteins.dat
+mkdir recombine
+mv proteins.dat recombine/
+cp recombine/proteins.dat ../proteins-saved.dat
+ls
+
+The ls command yields the output recombine since that is the only directory in the data directory and the proteins.dat file is in the recombine folder and the protein-saved.dat folder is in the directory that stores the data directory. 
+
+Using rm safely: 
+
+Running the command: rm -i thesis_backup/quotations.txt yields rm: remove regular file 'thesis_backup/quotations.txt'? Answering Y will delete it. Answering N will not. This is useful for confirmation of which file one is deleting. 
+
+Copy with multiple filenames:
+
+When given several file names the cp command copies the files to the directory at the end of the command. If the command cp is followed by three file names and no directory the output will state the last file is not a directory. 
+
+List filenames matching a pattern:
+
+In the molecules directory, the ls command ls *t??ne.pdb will produce the output: ethane.pdb methane.pdb
+
+More on wildcards:
+
+Commands Sam should type:
+cp *dataset* backup/datasets
+cp *calibration.txt backup/calibration
+cp 2015-11-* send_to_bob/all_november_files/
+cp *-23-dataset* send_to_bob/all_datasets_created_on_a_23rd/
+
+Organizing directories and files:
+
+Jamie needs to move fructose.dat and sucrose.dat to analyzed directory. The command to do this is: mv *.dat analyzed
+
+Reproduce a folder structure:
+
+To achieve the folder structure commands 1 and 2 will work:
+
+Command 1:
+mkdir 2016-05-20
+mkdir 2016-05-20/data
+mkdir 2016-05-20/data/processed
+mkdir 2016-05-20/data/raw
+
+Command 2:
+mkdir 2016-05-20
+cd 2016-05-20
+mkdir data
+cd data
+mkdir raw processed
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
