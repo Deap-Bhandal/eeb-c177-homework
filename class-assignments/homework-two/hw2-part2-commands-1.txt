@@ -1,0 +1,14 @@
+  371  cd Developer/repos/CSB/unix/data/
+  372  man head
+  373  head -n 25 Pacifici2013_data.csv > ~/Developer/repos/eeb-c177-homework/class-assignments/homework-two/Pacifici-25wordcount.txt
+  374  cd .. ..
+  375  cd ~/Developer/repos/eeb-c177-homework/class-assignments/homework-two/
+  376  ls
+  377  nano Pacifici-25wordcount.txt 
+  378  mv Pacifici-25wordcount.txt Pacifici-25lines.txt
+  379  ls
+  380  nano Pacifici-25lines.txt 
+  381  wc -w Pacifici-25lines.txt > Pacifici-25wordcount.txt
+  382  ls
+  383  nano Pacifici-25wordcount.txt 
+  384  history 14 > hw2-part2-commands-1.txt
