@@ -1,0 +1,42 @@
+  417  ls Developer/repos/CSB/unix/data | wc -l
+  418  ls Developer/repos/CSB/unix/data | wc -l > Developer/repos/eeb-c177-homework/class-assignments/homework-two/pipe-data-lines.txt
+  419  man cat
+  420  man wc
+  421  cd Developer/repos/CSB/unix/data/miRNA/
+  422  ls
+  423  cat ggo_miR.fasta hsa_miR.fasta | wc -m > ~/Developer/repos/eeb-c177-homework/class-assignments/homework-two/fasta-cat.txt
+  424  cd ~/Developer/repos/eeb-c177-homework/
+  425  git add -A
+  426  git commit -m "Used pipe in ls and cat commands"
+  427  git push origin master
+  428  cd ~/Developer/repos/CSB/unix/data/
+  429  ls
+  430  man head
+  431  head Pacifici2013_data.csv 
+  432  cd ~/Developer/repos/eeb-c177-homework/class-assignments/homework-two/
+  433  nano Pacifici-delim.txt
+  434  git add -A
+  435  nano Pacifici-delim.txt 
+  436  git add -A
+  437  git commit -m "Found delimiter"
+  438  git push origin master
+  439  head -n 1 ~/Developer/repos/CSB/unix/data/Pacifici2013_data.csv 
+  440  cut -d ";" -f 3 ~/Developer/repos/CSB/unix/data/Pacifici2013_data.csv | head -n 10
+  441  cut -d ";" -f 3 ~/Developer/repos/CSB/unix/data/Pacifici2013_data.csv | head -n 11
+  442  man tail
+  443  tail -n 5 
+  444  cut -d ";" ~/Developer/repos/CSB/unix/data/Pacifici2013_data.csv | tail -n 5
+  445  tail -n 5 ~/Developer/repos/CSB/unix/data/Pacifici2013_data.csv 
+  446  tail -n +2 | head -n 10
+  447  cd ~/Developer/repos/CSB/unix/data
+  448  head -n 10 Pacifici2013_data.csv
+  449  head -n 10 Pacifici2013_data.csv | tail -n +2
+  450  cd Developer/repos/CSB/unix/data/
+  451  ls
+  452  tail -n 5 Pacifici2013_data.csv 
+  453  tail -n +2 Pacifici2013_data.csv | head -n 10
+  454  tail -n +2 Pacifici2013_data.csv | head -n 10 > ~/Developer/repos/eeb-c177-homework/class-assignments/homework-two/Pacifici-ten.txt
+  455  history 30
+  456  history 40
+  457  history 41 > ~/
+  458  history 42 > ~/Developer/repos/eeb-c177-homework/class-assignments/homework-two/hw2-part3-commands.txt
