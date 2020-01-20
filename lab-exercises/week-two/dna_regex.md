@@ -1,5 +1,5 @@
 
-DNA Regex
+DNA Sequence Problems
 
 1. `c{2,5}`
 
