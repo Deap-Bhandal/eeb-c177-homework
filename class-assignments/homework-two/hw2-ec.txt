@@ -1,0 +1,29 @@
+Exercise 1.10.1
+
+1. changed directory to /CSB/unix/sandbox using command cd ~/Developer/repos/CSB/unix/sandbox
+2. using ls -l ../data/Marra2014_data.fasta yields 566026 bytes
+   using ls -lh ../data/Marra2014_data.fasta yields 533K bytes
+3. copied Marra2014_data.fasta to sandbox as my_file.fasta using command cp ../data/Marra2014_data.fasta my_file.fasta
+4. 16 contigs are classified as isogroup00036 (command: grep -c isogroup00036 my_file.fasta).
+5. Replaced space delimiter with comma (command: cat my_file.fasta | tr -s ' ' ',' > my_file2.txt 
+next command: mv my_file2.txt my_file.fasta)
+* I was unable to do it in one line of code as I kept getting an empty file, however I found online that this can be problematic and using two commands works*
+6. 43 unique isogroups. (command: grep '>' my_file.fasta | head -n 10
+output showed the 4th column is isogroups
+next command: grep '>' my_file.fasta | cut -d ',' -f 4 | sort | uniq | wc -l)
+7. Highest numreads: contig 00302 with 3330 (previous outputs showed that contig is column 1 and numreads is column 3
+command: grep '>' my_file.fasta | cut -d ',' -f 1,3 | sort -r -t '=' -k 2 -n | head -n 10
+the highest 10 are shown and the first one is contig 00302 with 3330).
+
+Exercise 1.10.2 (used the Gesquiere2011_data.csv file)
+
+1. previewed the structure of the file using command head -n 10 ~/Developer/repos/CSB/unix/data/Gesquiere2011_data.csv
+   I assumed maleID (first column) was the individual's number
+   used grep to extract number of times male 3 showed up using command cut -f 1 ~/Developer/repos/CSB/unix/data/Gesquiere2011_data.csv | grep -c -w 3
+   3 showed up 61 times
+   used grep to extract number of times male 27 showed up using command cut -f 1 ~/Developer/repos/CSB/unix/data/Gesquiere2011_data.csv | grep -c -w 27
+   27 showed up 5 times
+2. Wrote script titled script_#2.sh in homework-two directory. Script: cut -f 1 $1 | grep -c -w $2 where $1 is the file name and $2 is the individual's id
+   Tested in homework-two directory using command: bash script_#2.sh ~/Developer/repos/CSB/unix/data/Gesquiere2011_data.csv 3		Yielded 61
+   Tested in homework-two directory using command: bash script_#2.sh ~/Developer/repos/CSB/unix/data/Gesquiere2011_data.csv 27		Yielded 5
+3. I got tripped up on how to create the loop part of the script. I also know it needs to use the uniq command but I was unable to show the frequency of the IDs. 
