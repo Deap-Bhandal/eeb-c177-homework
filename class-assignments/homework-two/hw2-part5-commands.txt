@@ -1,0 +1,9 @@
+  511  man tail
+  512  man tr
+  513  man sort
+  514  man cut
+  515  tail -n +2 ~/Developer/repos/CSB/unix/data/Pacifici2013_data.csv | cut -d ";" -f 2-6 | tr ";" " " | sort -r -n -k 6
+  516  tail -n +2 ~/Developer/repos/CSB/unix/data/Pacifici2013_data.csv | cut -d ";" -f 2-6 | tr ";" " " | sort -r -n -k 6 > ~/Developer/repos/eeb-c177-homework/class-assignments/homework-two/BodyM.csv
+  517  cd ~/Developer/repos/eeb-c177-homework/class-assignments/homework-two/
+  518  ls
+  519  history 9 > hw2-part5-commands.txt
