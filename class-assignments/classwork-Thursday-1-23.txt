@@ -1,0 +1,16 @@
+Many homework files have the word "part" in them so to find their file paths, I typed the command:
+
+
+find ~/Developer/repos/eeb-c177-homework/ -iname *part*
+
+
+Output:
+
+
+/home/eebc177student/Developer/repos/eeb-c177-homework/class-assignments/week-three-hw/part-1-nobel.md
+/home/eebc177student/Developer/repos/eeb-c177-homework/class-assignments/homework-two/hw2-part1-commands.txt
+/home/eebc177student/Developer/repos/eeb-c177-homework/class-assignments/homework-two/hw2-part2-commands-2.txt
+/home/eebc177student/Developer/repos/eeb-c177-homework/class-assignments/homework-two/hw2-part4-commands.txt
+/home/eebc177student/Developer/repos/eeb-c177-homework/class-assignments/homework-two/hw2-part2-commands-1.txt
+/home/eebc177student/Developer/repos/eeb-c177-homework/class-assignments/homework-two/hw2-part5-commands.txt
+/home/eebc177student/Developer/repos/eeb-c177-homework/class-assignments/homework-two/hw2-part3-commands.txt
