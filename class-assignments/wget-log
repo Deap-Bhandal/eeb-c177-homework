@@ -1,0 +1,3 @@
+--2020-02-06 09:39:30--  http://dev.shawntylerschwartz/docs/blake.csv
+Resolving dev.shawntylerschwartz (dev.shawntylerschwartz)... failed: Name or service not known.
+wget: unable to resolve host address ‘dev.shawntylerschwartz’
