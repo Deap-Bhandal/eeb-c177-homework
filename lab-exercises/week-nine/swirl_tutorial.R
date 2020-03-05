@@ -224,7 +224,8 @@ evaluate(function(x){x[1]}, c(8, 4, 0))
 evaluate(function(x){x[length(x)]}, c(8, 4, 0))
 ?paste
 paste("Programming", "is", "fun!")
-mad_libs(place = "UCLA", adjustive = "beautiful", noun = "telephone")
+telegram(c("Hello", "world"))
+mad_libs(place = "UCLA",, noun = "telephone")
 "I" %p% "love" %p% "R!"
 2
 1
